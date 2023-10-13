@@ -1,4 +1,4 @@
-# AI Coder Project: Job-Tracker Web App
+# AI Coder Project: Job Tracker Web App
 
 # Introduction
 The aim of this project is to explore the efficiency and effectiveness of leveraging AI tools in developing a Job Tracker web application. The application intends to provide users with the ability to track job applications, required skills, and networking contacts. This document serves as a foundational roadmap, guiding our team through the initial planning and development phases.
