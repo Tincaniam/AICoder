@@ -1,5 +1,5 @@
 const request = require('supertest');
-const app = require('../job-tracker-server'); // Adjust the path accordingly to where your server.js file is
+const app = require('../job-tracker-server');
 const mongoose = require('mongoose');
 
 describe('Server Running and MongoDB Connected', () => {
