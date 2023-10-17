@@ -1,6 +1,10 @@
-name: CI
+name: Server CI
 
 on: [push, pull_request]
+
+defaults:
+  run:
+    working-directory: ./job-tracker-server
 
 jobs:
   build-and-test:
