@@ -1,4 +1,8 @@
-name: CI
+name: Server CI
+
+defaults:
+  run:
+    working-directory: ./job-tracker-server
 
 on: [push, pull_request]
 

@@ -2,6 +2,7 @@ const request = require('supertest');
 const app = require('../job-tracker-server');
 const mongoose = require('mongoose');
 
+// Basic Server and MongoDB Connection Tests
 describe('Server Running and MongoDB Connected', () => {
   let consoleSpy;
 
