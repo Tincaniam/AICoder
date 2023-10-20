@@ -1,0 +1,495 @@
+User
+We are developing a project with the following requirements:
+
+AI Coder Project 
+This project will be divided into two primary objectives (1) create a relatively simple website, app, or game using AI tools as much as possible, and (2) experiment with the entire process, and document success and failures. 
+The output of this research project is a thoroughly documented report of how to accomplish these two objectives (as well as a working project). Every step in this process will potentially lead to new findings and require new methods and/or tools. 
+Project Goals 
+First, this is research (but no need to cite prior work..there really isn’t any). You will experiment to try to find the most practical and efficient ways of completing common programming tasks. This probably means trying the same thing in 3 different ways, and figuring out simple metrics to judge the efficiency of the process and quality of the outcome. 
+The only thing to keep in mind, is that I would like some valid comparisons to be made. This won't be possible if all of you are trying to create completely different things. 
+Second, a big collection of tips and tricks is not what we are after. There will be (and already are) many videos and articles covering this. Instead, the hope is that some kind of general findings or principles will emerge. 
+Ultimately I would like a comprehensive report that discusses how best to organize your project, team, and tasks, and which AI tools should be applied at the various stages in the process. In other words, a complete manual for using AI efficiently to build this type of project. 
+I realize this is a big ask for only 8 weeks, and so I am willing to compromise on the quality of the completed project. This is a distant second in the goal hierarchy, but we do have to “keep it real”, and the code should work. If the tools actually meet the hype, then the project should look good as well! 
+Step 1: Project Plan and Architecture 
+Right 
+away there are decisions to make and questions to answer: 
+* 		●  How should the team be organized? Perhaps a good way to research this is to have parallel efforts from each team member, trying the same thing in different ways, different tools, etc... 
+* 		●  Is one architecture better for using AItools? 
+* 		●  What technologies should be used? Does it matter? 
+* 
+* 		●  How vague or specific should the prompts be? Startgeneralandadd functionality, or start specific and see if the AI tool can put it all together? 
+* 		●  Is it better to use a monolithic architecture? Microservices? 
+* 		●  What do you need to know to work with these tools? Should this be an iterative process with prototypes progressing to larger modules? Think about the entire system here, including database, server, front-end, deployment (docker?), documentation, writing tests, etc.. Are microservices better, because AI tools are currently better for smaller and more specific tasks? Or are the tools good enough to throw at larger and more-general problems? Can the tools effectively scaffold entire architectures? 
+You should remain skeptical about all of this. Does AI improve on a human coder writing code from scratch? How much? Where is the point of diminishing returns?
+
+This is the information and decisions we have made about the project so far:
+
+The real project will be to create a Job Tracker project with the following requirements using AI tools and to document the process to ultimately create a “How to guide” in using AI to create these kinds of projects in the future.The functionality of the job tracker web app would include:>>Account creation (user auth)>>Users can create jobs/internships>>Users can also create 'skills' which can relate to specific jobs/internships: Allows them to track which jobs require which skills, see how frequently certain skills are noted within applications, and track how comfortable they are with those skills/if they need to work on those skills more (ex: 'Docker is noted in 60% of your applications'). >>Users can create 'contacts': keep track of networking, contact information for individuals they've networked with who may be related to specific jobs/companies they're applying to.
+
+Piseth Chhoeuy
+Jun Kim
+Matthew Tinnel
+Eileen Yee
+
+
+Course: Online Capstone Project CS 467
+Instructor: William Pfeil
+
+We plan to split up our project by splitting into two teams of two (Piseth Chhoeuy and Eileen Yee) and (Jun Kim and Matthew Tinnel). Both teams will work in  parallel with the same sprints. Each person will use a few AI tools and compare their effectiveness (making sure that the comparable person in the other team is using different tools for comparison).
+
+Have Piseth working on the backend and Eileen working on the frontend for team 1. Have Matthew working on the backend and Jun working on the frontend for team 2.
+
+The tech stack we have decided on is MongoDB, Express, React, and Node. Please compare MongoDB vs MariaDB, and React Native/Javascript vs Django/Python as they were the other candidates. When focusing on pros and cons, please consider that choosing technologies that would work best with AI and considering the proliferation of javascript in AI’s training data.
+
+Please write a project plan with the following requirements
+
+Title page with Project Name, Team member names, Course.
+An Introduction.
+Background and/or prior approaches
+Planned experimental approaches
+An initial listing of which software libraries, languages, APIs, development tools, servers, and other systems will be required to create and use the software.
+Include a brief discussion on one important library, technology, or language that you chose. Take into account the pros and cons of the technology and especially the relative strengths and weaknesses in your team. For instance, you could discuss the tradeoffs between using Flutter/Dart vs React Native/Javascript, Django/Python vs Rails/Ruby, Unity vs Unreal, C++ vs C#, etc.
+A listing of the high-level project tasks for each Team member, complete with time estimate in hours. 
+Use a table format here, with one table per team member.
+This should be broken down by each week of development.
+Make sure to build in time for learning new technologies (if any - about a week for this).
+The amount of time spent per Team member must be roughly equivalent, and should be 10 hours per week minimum. If teammates do not have enough to do, the project must be expanded (talk to your PM, include stretch goals, etc). If the work seems like too much, we will have you modify the plan.
+At least one graphical example that demonstrate a screen or page mockup, design, board, level, flowchart, layout, etc.
+Other (Your choice - What does your project need to be a success? Data? Graphics? Integration Planning? PM input?)
+A conclusion or meme that sums everything up.
+
+ChatGPT
+AI Coder Project: Job Tracker Web App
+
+Title Page
+Project Name: AI-Powered Job Tracker Web App
+Team Members:
+
+Piseth Chhoeuy
+Jun Kim
+Matthew Tinnel
+Eileen Yee
+Course: Online Capstone Project CS 467
+Instructor: William Pfeil
+
+Introduction
+The aim of this project is to explore the efficiency and effectiveness of leveraging AI tools in developing a Job Tracker web application. The application intends to provide users with the ability to track job applications, required skills, and networking contacts. This document serves as a foundational roadmap, guiding our team through the initial planning and development phases.
+
+Background and Prior Approaches
+Traditional development methodologies, whether Agile or Waterfall, typically involve a manual approach to coding, testing, and deployment. However, with the recent advancements in AI and machine learning, developers now have the opportunity to leverage these tools for enhanced productivity and potentially superior outcomes. There exists a potential for AI to scaffold project architectures, optimize database queries, or even offer frontend design suggestions. The extent of this potential is what our team seeks to uncover.
+
+Planned Experimental Approaches
+Our strategy is to deploy two parallel teams, each utilizing different AI tools, to develop the project. This will allow us to effectively compare and contrast methodologies and results:
+
+Team 1:
+
+Piseth Chhoeuy (Backend)
+Eileen Yee (Frontend)
+Team 2:
+
+Matthew Tinnel (Backend)
+Jun Kim (Frontend)
+Software Libraries, Languages, and Tools
+Database: MongoDB, MariaDB
+Backend: Express, Django
+Frontend: React, React Native
+Server Side: Node.js, Python
+AI Tools: OpenAI Codex, Google AutoML, Microsoft Azure AI, IBM Watson
+Discussing React Native/Javascript vs Django/Python:
+
+React Native/JavaScript:
+
+Pros: Wide community support, extensive libraries, integration with various AI tools due to its widespread adoption.
+Cons: May require transpiling for full browser compatibility.
+Django/Python:
+
+Pros: Strong for backend operations, built-in admin interface, ORM support for databases.
+Cons: Might not be as robust for intricate frontend operations as React.
+Considering the strengths of our team, and the focus on AI’s training data favoring JavaScript, React Native/JavaScript was chosen for the frontend.
+
+Project Tasks
+Team Member	Week 1	Week 2	Week 3	...	Week 8
+Piseth Chhoeuy	Setup MongoDB (10hrs)	Setup Express Backend (10hrs)	...	...	Final Testing & Debugging (10hrs)
+Eileen Yee	Draft Frontend Mockups (10hrs)	Begin React Integration (10hrs)	...	...	User Interface Polishing (10hrs)
+Matthew Tinnel	Setup MariaDB (10hrs)	Setup Django Backend (10hrs)	...	...	Backend Optimization (10hrs)
+Jun Kim	Design UI/UX (10hrs)	React Native Prototyping (10hrs)	...	...	Final Touches on UI (10hrs)
+Graphical Example
+[Insert mockup of the Job Tracker dashboard page, showing job listings, user's skills progress, and a sidebar of networking contacts]
+
+Other
+Data: Sample job listings, dummy user data for testing.
+Graphics: Icons, banners, and other UI elements.
+Integration Planning: Determining how the frontend will communicate with the backend, especially in terms of RESTful API calls.
+Conclusion
+The convergence of AI with traditional development processes has opened up a realm of possibilities. Through this project, we aim to push the boundaries and explore the true potential of integrating AI tools in a development process. The journey ahead promises to be both challenging and enlightening.
+
+“If we knew what we were doing, it wouldn't be called research, would it?”
+— Albert Einstein
+
+![Insert a meme that showcases a developer pondering over a traditional code versus an AI-generated one.]
+
+
+
+User
+Please generate mockup of the Job Tracker dashboard page, showing job listings, user's skills progress, and a sidebar of networking contacts in html and css
+
+ChatGPT
+Certainly! Below is a basic HTML and CSS mockup of the Job Tracker dashboard page:
+
+HTML
+html
+Copy code
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Tracker Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h2>Networking Contacts</h2>
+            <ul>
+                <li>John Doe - Google</li>
+                <li>Mary Smith - Facebook</li>
+                <li>Alan Walker - Amazon</li>
+                <!-- Add other contacts here -->
+            </ul>
+        </div>
+        <div class="main-content">
+            <h1>Dashboard</h1>
+            <div class="job-listings">
+                <h2>Job Listings</h2>
+                <div class="job">
+                    <h3>Software Engineer - Apple</h3>
+                    <p>Location: Cupertino, CA</p>
+                    <p>Description: Develop and maintain software...</p>
+                </div>
+                <!-- Add other job listings here -->
+            </div>
+            <div class="skills-progress">
+                <h2>Skills Progress</h2>
+                <div class="skill">
+                    <span>Docker</span>
+                    <progress value="60" max="100"></progress>
+                    <span>60%</span>
+                </div>
+                <!-- Add other skills here -->
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+CSS (styles.css)
+css
+Copy code
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+}
+
+.sidebar {
+    width: 25%;
+    background-color: #f4f4f4;
+    padding: 15px;
+}
+
+.main-content {
+    width: 75%;
+    padding: 15px;
+}
+
+h1, h2, h3 {
+    color: #333;
+}
+
+.job-listings .job, .skills-progress .skill {
+    border: 1px solid #e1e1e1;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.skills-progress .skill {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+progress {
+    width: 70%;
+}
+
+This code provides a basic structure for your dashboard. The styling is minimalistic, and you might want to further improve and customize it according to your branding and functional needs. The mockup shows a sidebar for networking contacts, a section for job listings, and a skills progress section.
+
+
+
+User
+Can you recommend the quickest way to deploy this on my local machine to create a screenshot?
+
+ChatGPT
+Certainly! One of the quickest ways to deploy and view this on your local machine is by using the built-in server capabilities of many modern web development tools. Here's a step-by-step guide using Visual Studio Code (VS Code) and its Live Server extension:
+
+Install Visual Studio Code (VS Code)
+If you don't already have it, you can download and install VS Code from here.
+Install Live Server Extension for VS Code
+Open VS Code.
+Go to Extensions (you can use the shortcut Ctrl + Shift + X).
+Search for Live Server by Ritwick Dey.
+Click 'Install' to add this extension to VS Code.
+Create your project files:
+Create a new folder for your project on your local machine.
+Inside this folder, create a new file named index.html and another named styles.css.
+Paste the provided HTML content into index.html and the CSS content into styles.css.
+Open your project in VS Code:
+Open VS Code.
+Use File -> Open Folder to open your project folder in VS Code.
+Run with Live Server:
+Right-click on index.html in VS Code.
+Select Open with Live Server.
+This will launch your default web browser, and you should see your Job Tracker dashboard.
+Create a Screenshot:
+Once the browser displays your dashboard, you can take a screenshot:
+Windows: Press PrtScn to capture the entire screen or Alt + PrtScn to capture only the active window. The screenshot will be copied to your clipboard, and you can paste it into an image editor or a document.
+Mac: Press Cmd + Shift + 4 to take a screenshot of a portion of the screen. The screenshot will be saved to your desktop.
+Linux: The method may vary based on the distribution. Often, you can use PrtScn or a tool like gnome-screenshot.
+That's it! This method will allow you to quickly deploy and view the mockup locally.
+
+
+
+User
+Please style the sidebar and include a few more examples of each type of content
+
+ChatGPT
+Sure, I'll provide a more detailed and styled sidebar along with added content for each section.
+
+Updated CSS (styles.css)
+css
+Copy code
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f8fa;
+}
+
+.container {
+    display: flex;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+.sidebar {
+    width: 25%;
+    background-color: #fff;
+    padding: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.main-content {
+    width: 75%;
+    padding: 15px;
+    background-color: #fff;
+    margin-left: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2, h3 {
+    color: #333;
+}
+
+h2 {
+    border-bottom: 2px solid #e1e1e1;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.job-listings .job, .skills-progress .skill {
+    border: 1px solid #e1e1e1;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.skills-progress .skill {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+progress {
+    width: 70%;
+    height: 20px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #e1e1e1;
+    border-radius: 5px;
+}
+Updated HTML
+html
+Copy code
+<!-- ... (rest of the header) ... -->
+
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h2>Networking Contacts</h2>
+            <ul>
+                <li>John Doe - Google</li>
+                <li>Mary Smith - Facebook</li>
+                <li>Alan Walker - Amazon</li>
+                <li>Emma Watson - Microsoft</li>
+                <li>Rachel Green - Tesla</li>
+            </ul>
+        </div>
+        <div class="main-content">
+            <h1>Dashboard</h1>
+            <div class="job-listings">
+                <h2>Job Listings</h2>
+                <div class="job">
+                    <h3>Software Engineer - Apple</h3>
+                    <p>Location: Cupertino, CA</p>
+                    <p>Description: Develop and maintain software...</p>
+                </div>
+                <div class="job">
+                    <h3>Frontend Developer - Microsoft</h3>
+                    <p>Location: Redmond, WA</p>
+                    <p>Description: Build and optimize user interfaces...</p>
+                </div>
+                <div class="job">
+                    <h3>Backend Engineer - Netflix</h3>
+                    <p>Location: Los Gatos, CA</p>
+                    <p>Description: Maintain and scale backend services...</p>
+                </div>
+            </div>
+            <div class="skills-progress">
+                <h2>Skills Progress</h2>
+                <div class="skill">
+                    <span>Docker</span>
+                    <progress value="60" max="100"></progress>
+                    <span>60%</span>
+                </div>
+                <div class="skill">
+                    <span>Python</span>
+                    <progress value="40" max="100"></progress>
+                    <span>40%</span>
+                </div>
+                <div class="skill">
+                    <span>React</span>
+                    <progress value="80" max="100"></progress>
+                    <span>80%</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+This enhanced version provides more content examples and a refined visual representation. You can deploy it locally as mentioned before to see the updated styling and content.
+
+
+
+User
+This looks great, can you add a bit more color to the page while keeping with the minimalist style?
+
+ChatGPT
+Of course! A touch of color can enhance the visual appeal while still maintaining a minimalist style. Here's an update:
+
+Updated CSS (styles.css)
+css
+Copy code
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f8fa;
+}
+
+.container {
+    display: flex;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+.sidebar {
+    width: 25%;
+    background-color: #fff;
+    padding: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.main-content {
+    width: 75%;
+    padding: 15px;
+    background-color: #fff;
+    margin-left: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2, h3 {
+    color: #333;
+}
+
+h2 {
+    border-bottom: 2px solid #e1e1e1;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    color: #007acc;  /* Added color for header titles */
+}
+
+.job-listings .job, .skills-progress .skill {
+    border: 1px solid #e1e1e1;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.job-listings .job:hover, .skills-progress .skill:hover {
+    background-color: #f2f2f2;  /* Added hover effect */
+}
+
+.skills-progress .skill {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+progress {
+    width: 70%;
+    height: 20px;
+    color: #007acc;  /* Added color for the progress bars */
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #e1e1e1;
+    border-radius: 5px;
+}
+
+.sidebar li:hover {
+    background-color: #f2f2f2;  /* Added hover effect for sidebar */
+}
+
+Changes made:
+
+Header titles now have a subtle blue color for distinction.
+Hover effects for job listings and skills progress sections, to give a more interactive feel.
+The progress bars also get a blue hue.
+Feel free to adjust the color values to better match your preferences or project requirements. This minimalist color addition should enhance the visual appeal while retaining the simplistic design approach.
