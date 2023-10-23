@@ -11,7 +11,7 @@ You can also run the automated test suite by running
 The following serves as an example of the current functions the API supports and what kind of content it expects:
 
 ### Create a new user
-POST http://localhost:3000/api/users HTTP/1.1
+POST http://localhost:8001/api/users HTTP/1.1
 content-type: application/json
 
 {
@@ -21,7 +21,7 @@ content-type: application/json
 }
 
 ### Login User Test
-POST http://localhost:3000/api/users/login
+POST http://localhost:8001/api/users/login
 Content-Type: application/json
 
 {
@@ -30,7 +30,7 @@ Content-Type: application/json
 }
 
 ### Create Job Test
-POST http://localhost:3000/api/jobs
+POST http://localhost:8001/api/jobs
 Content-Type: application/json
 
 {
@@ -40,10 +40,10 @@ Content-Type: application/json
 }
 
 ### Get All Jobs Test
-GET http://localhost:3000/api/jobs
+GET http://localhost:8001/api/jobs
 
 ### Creating a JavaScript Skill
-POST http://localhost:3000/api/skills
+POST http://localhost:8001/api/skills
 Content-Type: application/json
 
 {
@@ -51,7 +51,7 @@ Content-Type: application/json
 }
 
 ### Creating a Docker Skill
-POST http://localhost:3000/api/skills
+POST http://localhost:8001/api/skills
 Content-Type: application/json
 
 {
@@ -59,10 +59,10 @@ Content-Type: application/json
 }
 
 ### Get All Skills Test
-GET http://localhost:3000/api/skills
+GET http://localhost:8001/api/skills
 
 ### Create User Skill Test
-POST http://localhost:3000/api/userSkills
+POST http://localhost:8001/api/userSkills
 Content-Type: application/json
 
 {
@@ -73,11 +73,11 @@ Content-Type: application/json
 }
 
 ### Get UserSkills by user ID
-GET http://localhost:3000/api/userSkills/byUser/6530c4edda98b7d842ff035a
+GET http://localhost:8001/api/userSkills/byUser/6530c4edda98b7d842ff035a
 Content-Type: application/json
 
 ### Create JobSkill 1
-POST http://localhost:3000/api/jobSkills
+POST http://localhost:8001/api/jobSkills
 Content-Type: application/json
 
 {
@@ -87,7 +87,7 @@ Content-Type: application/json
 }
 
 ### Create JobSkill 2
-POST http://localhost:3000/api/jobSkills
+POST http://localhost:8001/api/jobSkills
 Content-Type: application/json
 
 {
@@ -97,16 +97,16 @@ Content-Type: application/json
 }
 
 ### Get JobSkills by job ID
-GET http://localhost:3000/api/jobSkills/byJob/6531af097c0df22514c4982d
+GET http://localhost:8001/api/jobSkills/byJob/6531af097c0df22514c4982d
 Content-Type: application/json
 
 ### Get JobSkills by skill ID
-GET http://localhost:3000/api/jobSkills/bySkill/6531b519f8fff23b4e5fcd11
+GET http://localhost:8001/api/jobSkills/bySkill/6531b519f8fff23b4e5fcd11
 Content-Type: application/json
 
 ### Create Contact
 
-POST http://localhost:3000/api/contacts
+POST http://localhost:8001/api/contacts
 Content-Type: application/json
 
 {   "userId": "6530c4edda98b7d842ff035a",
