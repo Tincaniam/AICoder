@@ -1,3 +1,15 @@
+# Server Setup
+To run the server, clone the repository, navigate to job-tracker-server, and run:
+
+`npm start`
+
+You can also run the automated test suite by running
+
+`npm test`
+
+# Server API Guide
+The following serves as an example of the current functions the API supports and what kind of content it expects:
+
 ### Create a new user
 POST http://localhost:8001/api/users/register HTTP/1.1
 content-type: application/json
