@@ -9,7 +9,7 @@ const jobSkillRoutes = require('./routes/jobSkillRoutes');
 const contactRoutes = require('./routes/contactRoutes');
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8001;
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
