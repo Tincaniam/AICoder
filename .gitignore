@@ -1,0 +1,11 @@
+# This is a comment in .gitignore
+
+# Ignore all .log files
+*.log
+
+# Ignore the node_modules directory
+node_modules/
+
+# Ignore the build directory
+build/
+package-lock.json
