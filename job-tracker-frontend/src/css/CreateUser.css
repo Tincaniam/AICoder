@@ -1,36 +1,39 @@
-/* src/CreateUser.css */
-
 .container {
     width: 100%;
     max-width: 400px;
-    margin: 50px auto;
+    margin: 0 auto;
     padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center children horizontally */
 }
 
 h2 {
     text-align: center;
     margin-bottom: 20px;
+    width: 100%; /* Ensure it spans the full width of its container */
 }
 
 input {
-    width: 100%;
+    box-sizing: border-box; 
+    width: 100%; /* Ensure it spans the full width of its container */
     padding: 10px;
-    margin: 10px 0;
+    margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
 }
 
 button {
-    width: 100%;
+    box-sizing: border-box; 
+    width: 100%; /* Ensure it spans the full width of its container */
     padding: 10px;
     background-color: #007BFF;
     color: white;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    transition: background-color 0.2s;
 }
 
 button:hover {
@@ -38,6 +41,21 @@ button:hover {
 }
 
 .message {
+    width: 100%; /* Ensure it spans the full width of its container */
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 4px;
     text-align: center;
-    margin-top: 20px;
+}
+
+.message.success {
+    background-color: #D4EDDA;
+    color: #155724;
+    border: 1px solid #C3E6CB;
+}
+
+.message.error {
+    background-color: #F8D7DA;
+    color: #721C24;
+    border: 1px solid #F5C6CB;
 }
