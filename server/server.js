@@ -7,6 +7,7 @@ const jobRoutes = require('./routes/jobRouter');
 const contactRoutes = require('./routes/contactRouter');
 const skillRoutes = require('./routes/skillRouter');
 
+
 dotenv.config();
 
 const app = express();
@@ -34,8 +35,8 @@ app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
 
-// Routes
 app.use('/api/users', userRoutes);
 app.use('/api/jobs', jobRoutes);
 app.use('/api/contacts', contactRoutes);
 app.use('/api/skills', skillRoutes);
+
