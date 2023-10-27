@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-const Login = () => {
+const Register = () => {
     const [formData, setFormData] = useState({
         username: '',
         password: ''
@@ -11,17 +11,16 @@ const Login = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('/api/login', formData);
+            const response = await axios.post('/api/register', formData);
             setMessage(response.data.message);
-            // Here you might also set a user token, navigate to dashboard, etc.
         } catch (error) {
-            setMessage('Login failed');
+            setMessage('Registration failed');
         }
     }
 
     return (
         <div>
-            <h2>Login</h2>
+            <h2>Register</h2>
             <form onSubmit={handleSubmit}>
                 <input 
                     type="text" 
@@ -35,11 +34,11 @@ const Login = () => {
                     value={formData.password}
                     onChange={(e) => setFormData({ ...formData, password: e.target.value })}
                 />
-                <button type="submit">Login</button>
+                <button type="submit">Register</button>
             </form>
             <p>{message}</p>
         </div>
     );
 }
 
-export default Login;
+export default Register;
