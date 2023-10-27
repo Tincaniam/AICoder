@@ -1,14 +1,17 @@
-// src/CreateUser.js
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom'; // Import the useNavigate hook
 import '../css/CreateUser.css';
 
-const CreateUser = () => {
+const CreateUser = () => { // Removed props as it's not needed
     const [formData, setFormData] = useState({
         username: '',
         password: '',
         email: ''
     });
     const [message, setMessage] = useState('');
+    const [isSuccess, setIsSuccess] = useState(false); // For feedback color
+
+    const navigate = useNavigate(); // Use the hook here
 
     const handleChange = (e) => {
         setFormData({
@@ -19,19 +22,30 @@ const CreateUser = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        const userData = {
+            ...formData,
+            savedJobs: []
+        };
+        
         try {
-            const response = await fetch('/api/users', {
+            const response = await fetch('http://localhost:8001/api/users/register', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify(formData)
+                body: JSON.stringify(userData)
             });
 
             const result = await response.json();
+            setIsSuccess(response.ok);
             setMessage(result.message);
+            
+            if (response.ok) {
+                navigate('/login'); // Use the navigate function here
+            }
         } catch (error) {
-            setMessage('Error creating user.');
+            setIsSuccess(false);
+            setMessage("Network error or server isn't responding.");
         }
     };
 
@@ -44,7 +58,7 @@ const CreateUser = () => {
                 <input type="email" name="email" placeholder="Email" value={formData.email} onChange={handleChange} required />
                 <button type="submit">Sign Up</button>
             </form>
-            {message && <div className="message">{message}</div>}
+            {message && <div className={`message ${isSuccess ? 'success' : 'error'}`}>{message}</div>}
         </div>
     );
 }
