@@ -1,6 +1,7 @@
 require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
+const cors = require('cors');  // Import the CORS library
 const userRoutes = require('./routes/userRoutes');
 const jobRoutes = require('./routes/jobRoutes');
 const skillRoutes = require('./routes/skillRoutes');
@@ -10,6 +11,13 @@ const contactRoutes = require('./routes/contactRoutes');
 
 const app = express();
 const PORT = process.env.PORT || 8001;
+
+// Set up CORS before other middlewares and routes
+app.use(cors({
+  origin: 'http://localhost:3000',  // Allow requests from your frontend's URL
+  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+  credentials: true
+}));
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -21,8 +29,7 @@ app.use('/api/contacts', contactRoutes);
 app.use('/api/userSkills', userSkillRoutes);
 app.use('/api/jobSkills', jobSkillRoutes);
 
-// ... after setting up middleware
-
+// The user creation route 
 app.post('/api/users', async (req, res) => {
     const { username, password, email } = req.body;
 
@@ -40,8 +47,6 @@ app.post('/api/users', async (req, res) => {
         res.status(500).json({ error: error.message });
     }
 });
-
-// ... your server start code
 
 // Connect to MongoDB
 mongoose.connect(process.env.MONGODB_URI, {

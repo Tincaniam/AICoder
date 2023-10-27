@@ -41,14 +41,16 @@ exports.loginUser = async (req, res) => {
         if (!isMatch) {
             return res.status(400).json({ message: 'Incorrect password.' });
         }
-
-        // If you have set up JWT or any other authentication methods, you can generate and send a token here.
         
-        res.status(200).json({ message: 'Logged in successfully.' });
+        res.status(200).json({
+            message: 'Logged in successfully.',
+            userId: user._id // Sending the user's ID back in the response
+        });
     } catch (error) {
         res.status(500).json({ message: 'Server error.' });
     }
 };
+
 
 exports.updateUserById = async (req, res) => {
     try {
