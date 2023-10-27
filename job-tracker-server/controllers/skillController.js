@@ -29,6 +29,12 @@ exports.deleteSkillById = async (req, res) => {
             return res.status(404).json({ message: 'Skill not found.' });
         }
 
+        // If the skill is found and deleted, delete any jobskills that match the skill ID
+        await JobSkill.deleteMany({ skillId: req.params.id });
+
+        // If the skill is found and deleted, delete any userskills that match the skill ID
+        await UserSkill.deleteMany({ skillId: req.params.id });
+
         // If the skill is found and deleted, return it
         res.status(200).json({ message: 'Skill deleted successfully.', skill: deletedSkill });
     } catch (error) {

@@ -119,6 +119,9 @@ exports.deleteUserById = async (req, res) => {
             return res.status(404).json({ message: 'User not found.' });
         }
 
+        // If the user is found and deleted, delete any userskills that match the user ID
+        await UserSkill.deleteMany({ userId: req.params.id });
+
         // If the user is found and deleted, return it
         res.status(200).json({ message: 'User deleted successfully.', user: deletedUser });
     } catch (error) {

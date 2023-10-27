@@ -39,3 +39,20 @@ exports.getJobSkillsBySkill = async (req, res, next) => {
         next(error);
     }
 };
+
+exports.deleteJobSkillById = async (req, res) => {
+    try {
+        // Find the jobskill by ID and delete it
+        const deletedJobSkill = await JobSkill.findByIdAndDelete(req.params.id);
+
+        // If the jobskill is not found, return a 404 error
+        if (!deletedJobSkill) {
+            return res.status(404).json({ message: 'Job skill not found.' });
+        }
+
+        // If the jobskill is found and deleted, return it
+        res.status(200).json({ message: 'Job skill deleted successfully.', jobSkill: deletedJobSkill });
+    } catch (error) {
+        res.status(500).json({ message: 'Error deleting the job skill.' });
+    }
+};

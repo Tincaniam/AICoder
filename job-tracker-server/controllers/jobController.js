@@ -63,6 +63,9 @@ exports.deleteJobById = async (req, res) => {
             return res.status(404).json({ message: 'Job not found.' });
         }
 
+        // If the job is found and deleted, delete any jobskills that match the job ID
+        await JobSkill.deleteMany({ jobId: req.params.id });
+
         // If the job is found and deleted, return it
         res.status(200).json({ message: 'Job deleted successfully.', job: deletedJob });
     } catch (error) {
