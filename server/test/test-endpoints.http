@@ -9,3 +9,40 @@ Content-Type: application/json
     "email": "JohnDoe92@gmail.com",
     "password": "tempPass"
 }
+
+### Create a new job
+POST http://localhost:5000/api/jobs HTTP/1.1
+Content-Type: application/json
+
+{
+    "title": "Software Developer",
+    "description": "Develop and maintain web applications using the MERN stack.",
+    "company": "TechCorp",
+    "location": "New York, NY"
+}
+
+### Create a new contact
+POST http://localhost:5000/api/contacts HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "Jane Smith",
+    "email": "jane.smith@techcorp.com",
+    "phoneNumber": "+1234567890",
+    "company": "TechCorp",
+    "jobTitle": "HR Manager",
+    "notes": "Met at the TechCon 2023 conference.",
+    "user": "65359b1fad885d08ea13bc97",
+    "relatedJobs": "653b3046d21aebc7f3f259f0"
+}
+
+### Create a new skill
+POST http://localhost:5000/api/skills HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "JavaScript",
+    "description": "A versatile programming language primarily used for web development.",
+    "category": "Programming Language"
+}
+
