@@ -46,3 +46,35 @@ Content-Type: application/json
     "category": "Programming Language"
 }
 
+
+### Add a skill to a user
+POST http://localhost:5000/api/user-skills HTTP/1.1
+Content-Type: application/json
+
+{
+    "userId": "65359b1fad885d08ea13bc97",
+    "skillId": "653b35a1f0268571ab6c651c",
+    "proficiency": "Intermediate"
+}
+
+### Add a skill requirement to a job
+POST http://localhost:5000/api/job-skills HTTP/1.1
+Content-Type: application/json
+
+{
+    "jobId": "653b3046d21aebc7f3f259f0",
+    "skillId": "653b35a1f0268571ab6c651c",
+    "importance": "Essential"
+}
+
+### Add a job application for a user
+POST http://localhost:5000/api/user-applications HTTP/1.1
+Content-Type: application/json
+
+{
+    "userId": "65359b1fad885d08ea13bc97",
+    "jobId": "653b3046d21aebc7f3f259f0",
+    "dateApplied": "2023-10-20",
+    "status": "Pending",
+    "notes": "Applied through company website. Waiting for HR response."
+}

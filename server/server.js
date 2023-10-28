@@ -6,6 +6,10 @@ const userRoutes = require('./routes/usersRouter');
 const jobRoutes = require('./routes/jobRouter');
 const contactRoutes = require('./routes/contactRouter');
 const skillRoutes = require('./routes/skillRouter');
+const userSkillRoutes = require('./routes/userSkillRouter');
+const jobSkillRoutes = require('./routes/jobSkillRouter');
+const userApplicationRoutes = require('./routes/userApplicationRouter');
+
 
 
 dotenv.config();
@@ -35,8 +39,11 @@ app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
 
+// Routes
 app.use('/api/users', userRoutes);
 app.use('/api/jobs', jobRoutes);
 app.use('/api/contacts', contactRoutes);
 app.use('/api/skills', skillRoutes);
-
+app.use('/api/user-skills', userSkillRoutes);
+app.use('/api/job-skills', jobSkillRoutes);
+app.use('/api/user-applications', userApplicationRoutes);
