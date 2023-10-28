@@ -1,0 +1,42 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+  margin-bottom: 20px; /* Add a margin to push content below it */
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  /* min-height: 100vh; Comment this out to allow the header to take only as much space as it needs */
+  width: 100%; /* ensure it takes full width */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start; /* Align items to the top */
+  font-size: calc(10px + 2vmin);
+  color: white;
+  padding: 20px; /* Add some padding */
+}
+
+.App-link {
+  color: #61dafb;
+  margin-top: 20px; /* Add some spacing */
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
