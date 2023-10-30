@@ -39,3 +39,18 @@ exports.getJobSkillsBySkill = async (req, res, next) => {
         next(error);
     }
 };
+
+exports.deleteJobSkillById = async (req, res, next) => {
+    try {
+        const jobSkillId = req.params.id;
+        const deletedJobSkill = await JobSkill.findByIdAndDelete(jobSkillId);
+
+        if (!deletedJobSkill) {
+            return res.status(404).json({ message: 'Job skill association not found.' });
+        }
+
+        res.status(200).json({ message: 'Job skill association deleted successfully.' });
+    } catch (error) {
+        next(error);
+    }
+};

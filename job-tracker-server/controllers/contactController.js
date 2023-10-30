@@ -59,6 +59,24 @@ exports.createContact = async (req, res) => {
     }
 };
 
+exports.updateContactById = async (req, res) => {
+    try {
+        const contactId = req.params.id;
+        const updates = req.body;
+        const options = { new: true };
+
+        const updatedContact = await Contact.findByIdAndUpdate(contactId, updates, options);
+
+        if (!updatedContact) {
+            return res.status(404).json({ message: 'Contact not found.' });
+        }
+
+        res.status(200).json({ message: 'Contact updated successfully.', contact: updatedContact });
+    } catch (error) {
+        res.status(500).json({ message: 'Error updating the contact.' });
+    }
+};
+
 exports.deleteContactById = async (req, res) => {
     try {
         // Find the contact by ID and delete it

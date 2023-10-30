@@ -51,7 +51,6 @@ exports.loginUser = async (req, res) => {
     }
 };
 
-
 exports.updateUserById = async (req, res) => {
     try {
         // Hash the new password

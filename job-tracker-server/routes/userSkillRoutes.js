@@ -6,6 +6,8 @@ router.post('/', userSkillController.createUserSkill);
 
 router.get('/byUser/:userId', userSkillController.getUserSkills);
 
+router.delete('/:id', userSkillController.deleteUserSkillById);
+
 // Add routes for other CRUD operations if needed.
 
 module.exports = router;
