@@ -26,14 +26,14 @@ POST http://localhost:5000/api/contacts HTTP/1.1
 Content-Type: application/json
 
 {
-    "name": "Jane Smith",
-    "email": "jane.smith@techcorp.com",
-    "phoneNumber": "+1234567890",
-    "company": "TechCorp",
-    "jobTitle": "HR Manager",
-    "notes": "Met at the TechCon 2023 conference.",
-    "user": "65359b1fad885d08ea13bc97",
-    "relatedJobs": "653b3046d21aebc7f3f259f0"
+    "name": "Joe Smith",
+    "email": "Joe.smith@techcorp.com",
+    "phoneNumber": "+123450009",
+    "company": "CapTech",
+    "jobTitle": "IT Manager",
+    "notes": "Met at the Atlassian 2023 conference.",
+    "user": "6544657d3b3f9f8cc519430c",
+    "relatedJobs": "654466d77e3869761063369c"
 }
 
 ### Create a new skill
@@ -134,3 +134,22 @@ Content-Type: application/json
 
 ### Delete a job
 DELETE http://localhost:5000/api/jobs/653d8a74c2715a9e65b38881 HTTP/1.1
+
+### Update a contact
+PUT http://localhost:5000/api/contacts/6544727fd40900a7312dffdd HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "UpdatedName",
+    "email": "updated.email@example.com",
+    "phoneNumber": "123-456-7890",
+    "company": "UpdatedCompany",
+    "jobTitle": "UpdatedJobTitle",
+    "notes": "Updated notes about this contact",
+    "user": "65359b1fad885d08ea13bc97",
+    "relatedJobs": "653b3046d21aebc7f3f259f0"
+}
+
+### Delete a contact
+DELETE http://localhost:5000/api/contacts/6544727fd40900a7312dffdd HTTP/1.1
+
