@@ -132,6 +132,19 @@ Content-Type: application/json
 GET http://localhost:8001/api/userSkills/byUser/6530c4edda98b7d842ff035a
 Content-Type: application/json
 
+### Update UserSkill by ID
+PUT http://localhost:8001/api/userSkills/6531b7a6ba2b522738f7ac18
+Content-Type: application/json
+
+{
+    "proficiency": 90,
+    "notes": "Currently learning advanced topics."
+}
+
+### Delete UserSkill by ID
+DELETE http://localhost:8001/api/userSkills/653d8b2ec8ba5fc892440983
+Content-Type: application/json
+
 ### Create JobSkill 1
 POST http://localhost:8001/api/jobSkills
 Content-Type: application/json
@@ -158,6 +171,18 @@ Content-Type: application/json
 
 ### Get JobSkills by skill ID
 GET http://localhost:8001/api/jobSkills/bySkill/6531b519f8fff23b4e5fcd11
+Content-Type: application/json
+
+### Update JobSkill by ID
+PUT http://localhost:8001/api/jobSkills/6531bc6059ee545b6621507e
+Content-Type: application/json
+
+{
+  "importance": "Essential"
+}
+
+### Delete JobSkill by ID
+DELETE http://localhost:8001/api/jobSkills/653d8b38c8ba5fc892440989
 Content-Type: application/json
 
 ### Create Contact
@@ -210,6 +235,14 @@ Content-Type: application/json
     "jobTitle": "Software Engineer",
     "notes": "Met at Tech Conference 2023.",
     "relatedJobs": ["6531af097c0df22514c4982d"]
+}
+
+### Update Contact by ID
+PUT http://localhost:8001/api/contacts/653d8b4ec8ba5fc892440995
+Content-Type: application/json
+
+{  
+    "name": "Jane Smith"
 }
 
 ### Delete Contact by ID

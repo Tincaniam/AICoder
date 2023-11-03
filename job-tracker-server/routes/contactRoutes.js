@@ -11,6 +11,8 @@ router.get('/user/:userId', contactController.getAllContactsForUser);
 // Map the POST endpoint to the /api/contacts URL
 router.post('/', contactController.createContact);
 
+router.put('/:id', contactController.updateContactById);
+
 // Map the DELETE endpoint to the /api/contacts/:id URL
 router.delete('/:id', contactController.deleteContactById);
 

@@ -19,6 +19,20 @@ exports.getAllSkills = async (req, res) => {
     }
 };
 
+exports.getSkillById = async (req, res) => {
+    try {
+        const skill = await Skill.findById(req.params.id);
+
+        if (!skill) {
+            return res.status(404).json({ message: 'Skill not found.' });
+        }
+
+        res.status(200).json(skill);
+    } catch (error) {
+        res.status(500).json({ message: 'Error retrieving the skill.' });
+    }
+};
+
 exports.deleteSkillById = async (req, res) => {
     try {
         // Find the skill by ID and delete it
