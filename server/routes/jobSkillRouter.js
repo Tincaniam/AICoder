@@ -7,7 +7,7 @@ const router = express.Router();
 
 router.post('/', jobSkillController.addJobSkill);
 router.get('/:jobId', jobSkillController.getJobSkills);
-
-// Routes for updating, deleting, etc., can be added as needed
+router.put('/:id', jobSkillController.updateJobSkill);
+router.delete('/:id', jobSkillController.deleteJobSkill);
 
 module.exports = router;

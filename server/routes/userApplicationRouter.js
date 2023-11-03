@@ -7,7 +7,7 @@ const router = express.Router();
 
 router.post('/', userApplicationController.addUserApplication);
 router.get('/:userId', userApplicationController.getUserApplications);
-
-// Routes for updating, deleting, etc., can be added as needed
+router.put('/:id', userApplicationController.updateUserApplication);
+router.delete('/:id', userApplicationController.deleteUserApplication);
 
 module.exports = router;

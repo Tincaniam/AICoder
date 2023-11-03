@@ -48,4 +48,28 @@ exports.createContact = async (req, res) => {
     }
 };
 
-// Add additional functions for updating, deleting, etc., as needed
+// Update contact
+exports.updateContact = async (req, res) => {
+    try {
+        const updatedContact = await Contact.findByIdAndUpdate(req.params.id, req.body, { new: true });
+        if (!updatedContact) {
+            return res.status(404).json({ message: "Contact not found" });
+        }
+        res.json(updatedContact);
+    } catch (err) {
+        res.status(400).json({ message: err.message });
+    }
+};
+
+// Delete contact
+exports.deleteContact = async (req, res) => {
+    try {
+        const deletedContact = await Contact.findByIdAndDelete(req.params.id);
+        if (!deletedContact) {
+            return res.status(404).json({ message: "Contact not found" });
+        }
+        res.json({ message: "Contact deleted successfully" });
+    } catch (err) {
+        res.status(500).json({ message: err.message });
+    }
+};

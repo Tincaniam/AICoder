@@ -30,4 +30,28 @@ exports.getUserApplications = async (req, res) => {
     }
 };
 
-// Additional functions for updating, deleting, etc., can be added as needed
+// Update user application
+exports.updateUserApplication = async (req, res) => {
+    try {
+        const updatedUserApplication = await UserApplication.findByIdAndUpdate(req.params.id, req.body, { new: true });
+        if (!updatedUserApplication) {
+            return res.status(404).json({ message: "User application not found" });
+        }
+        res.json(updatedUserApplication);
+    } catch (err) {
+        res.status(400).json({ message: err.message });
+    }
+};
+
+// Delete user application
+exports.deleteUserApplication = async (req, res) => {
+    try {
+        const deletedUserApplication = await UserApplication.findByIdAndDelete(req.params.id);
+        if (!deletedUserApplication) {
+            return res.status(404).json({ message: "User application not found" });
+        }
+        res.json({ message: "User application deleted successfully" });
+    } catch (err) {
+        res.status(500).json({ message: err.message });
+    }
+};
