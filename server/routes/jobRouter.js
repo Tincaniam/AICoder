@@ -8,7 +8,7 @@ const router = express.Router();
 router.get('/', jobController.getAllJobs);
 router.get('/:id', jobController.getJob, (req, res) => res.json(res.job));
 router.post('/', jobController.createJob);
-
-// Add routes for updating, deleting, etc., as needed
+router.put('/:id', jobController.updateJob);
+router.delete('/:id', jobController.deleteJob);
 
 module.exports = router;

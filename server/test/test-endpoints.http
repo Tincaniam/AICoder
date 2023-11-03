@@ -120,3 +120,17 @@ Content-Type: application/json
 ### Delete a job skill
 DELETE http://localhost:5000/api/job-skills/654467077e3869761063369e HTTP/1.1
 
+### Update a job
+PUT http://localhost:5000/api/jobs/653d8a74c2715a9e65b38881 HTTP/1.1
+Content-Type: application/json
+
+{
+    "title": "UpdatedJobTitle",
+    "company": "UpdatedCompany",
+    "description": "Updated job description here.",
+    "status": "Applied",
+    "userId": "UserID_Associated_with_this_Job"
+}
+
+### Delete a job
+DELETE http://localhost:5000/api/jobs/653d8a74c2715a9e65b38881 HTTP/1.1
