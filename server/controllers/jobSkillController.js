@@ -28,4 +28,28 @@ exports.getJobSkills = async (req, res) => {
     }
 };
 
-// Additional functions for updating, deleting, etc., can be added as needed
+// Update job skill
+exports.updateJobSkill = async (req, res) => {
+    try {
+        const updatedJobSkill = await JobSkill.findByIdAndUpdate(req.params.id, req.body, { new: true });
+        if (!updatedJobSkill) {
+            return res.status(404).json({ message: "JobSkill not found" });
+        }
+        res.json(updatedJobSkill);
+    } catch (err) {
+        res.status(400).json({ message: err.message });
+    }
+};
+
+// Delete job skill
+exports.deleteJobSkill = async (req, res) => {
+    try {
+        const deletedJobSkill = await JobSkill.findByIdAndDelete(req.params.id);
+        if (!deletedJobSkill) {
+            return res.status(404).json({ message: "JobSkill not found" });
+        }
+        res.json({ message: "JobSkill deleted successfully" });
+    } catch (err) {
+        res.status(500).json({ message: err.message });
+    }
+};

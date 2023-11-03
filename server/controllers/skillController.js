@@ -43,4 +43,28 @@ exports.createSkill = async (req, res) => {
     }
 };
 
-// Add additional functions for updating, deleting, etc., as needed
+// Update skill
+exports.updateSkill = async (req, res) => {
+    try {
+        const updatedSkill = await Skill.findByIdAndUpdate(req.params.id, req.body, { new: true });
+        if (!updatedSkill) {
+            return res.status(404).json({ message: "Skill not found" });
+        }
+        res.json(updatedSkill);
+    } catch (err) {
+        res.status(400).json({ message: err.message });
+    }
+};
+
+// Delete skill
+exports.deleteSkill = async (req, res) => {
+    try {
+        const deletedSkill = await Skill.findByIdAndDelete(req.params.id);
+        if (!deletedSkill) {
+            return res.status(404).json({ message: "Skill not found" });
+        }
+        res.json({ message: "Skill deleted successfully" });
+    } catch (err) {
+        res.status(500).json({ message: err.message });
+    }
+};
