@@ -40,6 +40,25 @@ exports.getJobSkillsBySkill = async (req, res, next) => {
     }
 };
 
+// Update job skill by JobSkillID
+exports.updateJobSkillById = async (req, res) => {
+    try {
+      // Find JobSkill by JobSkillId and update it
+      const updatedJobSkill = await JobSkill.findByIdAndUpdate(req.params.id, req.body, { new: true });
+  
+      if (!updatedJobSkill) {
+        return res.status(404).json({ message: 'JobSkill not found' });
+      }
+  
+      res.status(200).json({
+        message: 'Job skill updated successfully',
+        updatedJobSkill
+      });
+    } catch (error) {
+      res.status(500).json({ message: 'Error updating job skill', error: error.message });
+    }
+  };
+
 exports.deleteJobSkillById = async (req, res, next) => {
     try {
         const jobSkillId = req.params.id;
