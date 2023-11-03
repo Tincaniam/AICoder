@@ -3,10 +3,10 @@ POST http://localhost:5000/api/users HTTP/1.1
 Content-Type: application/json
 
 {
-    "userId": "BigJohn92",
-    "firstName": "John",
-    "lastName": "Doe",
-    "email": "JohnDoe92@gmail.com",
+    "userId": "NewUser92",
+    "firstName": "Piseth",
+    "lastName": "Cee",
+    "email": "PCee92@gmail.com",
     "password": "tempPass"
 }
 
@@ -41,8 +41,8 @@ POST http://localhost:5000/api/skills HTTP/1.1
 Content-Type: application/json
 
 {
-    "name": "JavaScript",
-    "description": "A versatile programming language primarily used for web development.",
+    "name": "Python",
+    "description": "A versatile programming language that has many uses",
     "category": "Programming Language"
 }
 
@@ -78,3 +78,31 @@ Content-Type: application/json
     "status": "Pending",
     "notes": "Applied through company website. Waiting for HR response."
 }
+
+### Update a user
+PUT http://localhost:5000/api/users/6544572c5c5c75a8597df342 HTTP/1.1
+Content-Type: application/json
+
+{
+    "firstName": "Piseth",
+    "lastName": "Chewy",
+    "email": "UpdatedEmail@example.com",
+    "password": "UpdatedPassword"
+}
+
+### Delete a user
+DELETE http://localhost:5000/api/users/6544572c5c5c75a8597df342 HTTP/1.1
+
+### Update a user skill
+PUT http://localhost:5000/api/user-skills/653d8a80c2715a9e65b38887 HTTP/1.1
+Content-Type: application/json
+
+{
+    "userId": "6544657d3b3f9f8cc519430c",
+    "skillId": "6544650a3b3f9f8cc519430a",
+    "proficiency": "Intermediate"
+}
+
+### Delete a user skill
+DELETE http://localhost:5000/api/user-skills/653d8a80c2715a9e65b38887 HTTP/1.1
+
