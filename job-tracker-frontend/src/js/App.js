@@ -6,6 +6,7 @@ import Skills from './Skills';
 import Contacts from './Contacts';
 import Login from './Login';
 import Profile from './Profile';
+
 import '../css/App.css';
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
                     <Route path="/skills" element={<Skills />} />
                     <Route path="/contacts" element={<Contacts />} />
                     {/* Add more routes as needed */}
+
                 </Routes>
             </div>
         </Router>

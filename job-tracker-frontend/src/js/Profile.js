@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';  // <-- Ensure useLocation is imported
+
 import '../css/Profile.css';
 
 const Profile = () => {
@@ -59,6 +60,7 @@ const Profile = () => {
             <div className="profile-links">
                 <button onClick={handleJobsClick}>Jobs</button>
                 <button onClick={handleSkillsClick}>Skills</button>
+
                 <button onClick={handleContactsClick}>Contacts</button>
             </div>
         </div>
