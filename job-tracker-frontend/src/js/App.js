@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import CreateUser from './CreateUser';
 import JobForm from './JobForm';
 import SkillForm from './SkillForm';
-import ContactForm from './ContactForm';
+import Contacts from './Contacts';
 import Login from './Login';  
 import Profile from './Profile'; // Import the new Profile component
 import '../css/App.css';
@@ -20,7 +20,7 @@ function App() {
                         <li><Link to="/profile">Profile</Link></li>  {/* Link to the new Profile page */}
                         <li><Link to="/create-job">Create Job</Link></li>
                         <li><Link to="/create-skill">Create Skill</Link></li>
-                        <li><Link to="/create-contact">Create Contact</Link></li>
+                        <li><Link to="/contacts">Contacts</Link></li>
                     </ul>
                 </nav>
 
@@ -31,7 +31,7 @@ function App() {
                     <Route path="/profile" element={<Profile />} />  {/* Add the Profile route */}
                     <Route path="/create-job" element={<JobForm />} />
                     <Route path="/create-skill" element={<SkillForm />} />
-                    <Route path="/create-contact" element={<ContactForm />} />
+                    <Route path="/contacts" element={<Contacts />} />
                 </Routes>
             </div>
         </Router>

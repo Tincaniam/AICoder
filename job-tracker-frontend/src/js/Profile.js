@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';  // <-- Ensure useLocation is imported
 import '../css/Profile.css';
 
 const Profile = () => {
-    const location = useLocation();
+    const navigate = useNavigate();
+    const location = useLocation();  // <-- Use the useLocation hook
     const userId = location.state?.userId;
     const [userData, setUserData] = useState(null);
 
@@ -28,6 +29,10 @@ const Profile = () => {
         }
     }, [userId]);
 
+    const handleContactsClick = () => {
+        navigate('/contacts', { state: { userId, userData } });
+    };
+
     return (
         <div className="profile-container">
             <div className="profile-image">
@@ -46,7 +51,7 @@ const Profile = () => {
             <div className="profile-links">
                 <Link to="/create-job">Jobs</Link>
                 <Link to="/create-skill">Skills</Link>
-                <Link to="/create-contact">Contacts</Link>
+                <button onClick={handleContactsClick}>Contacts</button>
             </div>
         </div>
     );

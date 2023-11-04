@@ -1,0 +1,50 @@
+/* src/css/ContactForm.css */
+.form-container {
+    width: 100%;
+    max-width: 800px; /* Adjust as necessary */
+    margin: 50px auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.table-responsive {
+    width: 100%;
+    overflow-x: auto; /* Adds horizontal scroll to the table */
+}
+
+table {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-collapse: collapse;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1); /* Optional */
+}
+
+th, td {
+    text-align: left;
+    padding: 8px; /* Adjust padding as needed */
+    white-space: normal; /* Ensures text goes to the next line */
+    word-wrap: break-word; /* Ensures words do not overflow their container */
+}
+
+/* Styles for the form inputs and labels could go here */
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+    .form-container {
+        padding: 15px;
+    }
+    
+    th, td {
+        padding: 8px; /* Smaller padding on smaller screens */
+    }
+
+    table {
+        max-width: none; /* Ensures the table can be as wide as necessary */
+    }
+}
