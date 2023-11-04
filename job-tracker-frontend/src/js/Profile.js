@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useNavigate, useLocation } from 'react-router-dom';  // <-- Ensure useLocation is imported
+import { useNavigate, useLocation } from 'react-router-dom';  // <-- Ensure useLocation is imported
+
 import '../css/Profile.css';
 
 const Profile = () => {
@@ -29,6 +30,14 @@ const Profile = () => {
         }
     }, [userId]);
 
+    const handleJobsClick = () => {
+        navigate('/jobs', { state: { userId, userData } });
+    };
+
+    const handleSkillsClick = () => {
+        navigate('/skills', { state: { userId, userData } });
+    };
+
     const handleContactsClick = () => {
         navigate('/contacts', { state: { userId, userData } });
     };
@@ -49,8 +58,9 @@ const Profile = () => {
             </div>
             <h3 className="username">{userData ? userData.username : 'Loading...'}</h3>
             <div className="profile-links">
-                <Link to="/create-job">Jobs</Link>
-                <Link to="/create-skill">Skills</Link>
+                <button onClick={handleJobsClick}>Jobs</button>
+                <button onClick={handleSkillsClick}>Skills</button>
+
                 <button onClick={handleContactsClick}>Contacts</button>
             </div>
         </div>
