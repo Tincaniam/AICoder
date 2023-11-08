@@ -3,7 +3,7 @@ import axios from 'axios';
 
 
 // Replace with your actual context import
-import { AuthContext } from './path-to-your-auth-context';
+import { AuthContext } from './AuthContext';
 
 const Contacts = ({ userId }) => { // Assuming you pass the logged-in user's ID as a prop
     const [contacts, setContacts] = useState([]);
