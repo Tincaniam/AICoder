@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import axios from 'axios';
 
-
-// Replace with your actual context import
+// Import your actual AuthContext
 import { AuthContext } from './AuthContext';
 
-const Contacts = ({ userId }) => { // Assuming you pass the logged-in user's ID as a prop
+const Contacts = () => {
     const [contacts, setContacts] = useState([]);
+    const { userId } = useContext(AuthContext); // Get the userId from the AuthContext
     const [newContact, setNewContact] = useState({
         name: '',
         email: '',
@@ -14,7 +14,7 @@ const Contacts = ({ userId }) => { // Assuming you pass the logged-in user's ID 
         company: '',
         jobTitle: '',
         notes: '',
-        user: userId, // Set the user ID from props or from a context/store if you have authentication
+        user: userId, // This will be set after the component mounts and the context is loaded
         relatedJobs: []
     });
 
@@ -22,6 +22,11 @@ const Contacts = ({ userId }) => { // Assuming you pass the logged-in user's ID 
         // With Strict Mode, you may see this effect run twice in development mode
         fetchContacts();
     }, []);
+
+    useEffect(() => {
+        // Update the user field in newContact when the userId is available or changes
+        setNewContact(prev => ({ ...prev, user: userId }));
+    }, [userId]);
 
     const fetchContacts = async () => {
         try {
@@ -34,18 +39,23 @@ const Contacts = ({ userId }) => { // Assuming you pass the logged-in user's ID 
 
     const handleInputChange = (e) => {
         const { name, value } = e.target;
-        setNewContact((prev) => ({
+        setNewContact(prev => ({
             ...prev,
             [name]: value
         }));
     };
 
     const addContact = async () => {
-        console.log("Trying to add a contact...");
-        console.log(newContact); // Log the new contact data for debugging
+        if (!userId) {
+            console.error('User ID is required to add a contact.');
+            return;
+        }
 
         try {
-            const response = await axios.post('http://localhost:5000/api/contacts', newContact);
+            const response = await axios.post('/api/contacts', {
+                ...newContact,
+                user: userId // Make sure to include the userId in the request
+            });
             setContacts([...contacts, response.data]);
             // Reset newContact state after successful addition
             setNewContact({
@@ -55,7 +65,7 @@ const Contacts = ({ userId }) => { // Assuming you pass the logged-in user's ID 
                 company: '',
                 jobTitle: '',
                 notes: '',
-                user: '',
+                user: userId, // Reset with userId still in place
                 relatedJobs: []
             });
         } catch (error) {
@@ -125,7 +135,7 @@ const Contacts = ({ userId }) => { // Assuming you pass the logged-in user's ID 
                 onChange={handleInputChange} // You will need a custom handler for relatedJobs if it's an array
             />
             */}
-                <button type="button" onClick={addContact}>Add Contact</button>
+                <button type="button" onClick={addContact} disabled={!userId}>Add Contact</button>
             </div>
             <ul>
                 {contacts.map(contact => (
