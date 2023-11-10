@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 
 const Jobs = () => {
@@ -9,6 +9,23 @@ const Jobs = () => {
         jobLocation: '',
         jobDescription: ''
     });
+
+    useEffect(() => {
+        const fetchJobs = async () => {
+            try {
+                const response = await fetch('http://localhost:5000/api/jobs');
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                const data = await response.json();
+                setJobs(data); // Assuming the data is an array of jobs
+            } catch (error) {
+                console.error('There was a problem fetching jobs:', error);
+            }
+        };
+
+        fetchJobs();
+    }, []);    
 
     const handleChange = (e) => {
         setFormData({
