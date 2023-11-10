@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-const Contacts = () => {
-    const [contacts, setContacts] = useState([]);
 
+// Replace with your actual context import
+import { AuthContext } from './path-to-your-auth-context';
+
+const Contacts = ({ userId }) => { // Assuming you pass the logged-in user's ID as a prop
+    const [contacts, setContacts] = useState([]);
     const [newContact, setNewContact] = useState({
         name: '',
         email: '',
@@ -11,8 +14,8 @@ const Contacts = () => {
         company: '',
         jobTitle: '',
         notes: '',
-        user: '', // Assuming this should be a string representing the user ID
-        relatedJobs: [] // Assuming this is an array of strings representing job IDs
+        user: userId, // Set the user ID from props or from a context/store if you have authentication
+        relatedJobs: []
     });
 
     useEffect(() => {
@@ -42,7 +45,7 @@ const Contacts = () => {
         console.log(newContact); // Log the new contact data for debugging
 
         try {
-            const response = await axios.post('/api/contacts', newContact);
+            const response = await axios.post('http://localhost:5000/api/contacts', newContact);
             setContacts([...contacts, response.data]);
             // Reset newContact state after successful addition
             setNewContact({
@@ -56,7 +59,7 @@ const Contacts = () => {
                 relatedJobs: []
             });
         } catch (error) {
-            console.error('Error adding contact:', error.response || error);
+            console.error('Error adding contact:', error.response ? error.response.data : error.message);
         }
     };
 
