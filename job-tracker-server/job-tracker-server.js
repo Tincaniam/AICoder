@@ -13,11 +13,8 @@ const app = express();
 const PORT = process.env.PORT || 8001;
 
 // Set up CORS before other middlewares and routes
-app.use(cors({
-  origin: 'http://localhost:3000',  // Allow requests from your frontend's URL
-  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-  credentials: true
-}));
+                      
+app.use(cors());
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
