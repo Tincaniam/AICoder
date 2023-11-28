@@ -16,7 +16,7 @@ const Contacts = () => {
         const fetchContacts = async () => {
             setLoading(true);
             try {
-                const response = await fetch(`http://localhost:8001/api/contacts/user/${userId}`);
+                const response = await fetch(`/api/contacts/user/${userId}`);
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}`);
                 }
@@ -41,7 +41,7 @@ const Contacts = () => {
         const newContact = Object.fromEntries(formData.entries());
 
         try {
-            const response = await fetch('http://localhost:8001/api/contacts', {
+            const response = await fetch('http://localhost:3000/api/contacts', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -73,7 +73,7 @@ const Contacts = () => {
     const handleUpdateSubmit = async (event, id) => {
         event.preventDefault();
         try {
-            const response = await fetch(`http://localhost:8001/api/contacts/${id}`, {
+            const response = await fetch(`http://localhost:3000/api/contacts/${id}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',
@@ -96,7 +96,7 @@ const Contacts = () => {
 
     const handleDelete = async (id) => {
         try {
-            const response = await fetch(`http://localhost:8001/api/contacts/${id}`, {
+            const response = await fetch(`http://localhost:3000/api/contacts/${id}`, {
                 method: 'DELETE',
                 headers: {
                     'Content-Type': 'application/json',

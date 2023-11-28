@@ -15,7 +15,7 @@ const Jobs = () => {
     useEffect(() => {
         const fetchJobs = async () => {
             try {
-                const response = await fetch('http://localhost:8001/api/jobs');
+                const response = await fetch('/api/jobs');
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}`);
                 }
@@ -48,7 +48,7 @@ const Jobs = () => {
         };
 
         try {
-            const response = await fetch('http://localhost:8001/api/jobs', {
+            const response = await fetch('http://localhost:3000/api/jobs', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

@@ -11,7 +11,7 @@ You can also run the automated test suite by running
 The following serves as an example of the current functions the API supports and what kind of content it expects:
 
 ### Create a new user
-POST http://localhost:8001/api/users/register HTTP/1.1
+POST http://localhost:3000/api/users/register HTTP/1.1
 content-type: application/json
 
 {
@@ -21,10 +21,10 @@ content-type: application/json
 }
 
 ### Get User by ID
-GET http://localhost:8001/api/users/6530c4edda98b7d842ff035a
+GET http://localhost:3000/api/users/6530c4edda98b7d842ff035a
 
 ### Login User Test
-POST http://localhost:8001/api/users/login
+POST http://localhost:3000/api/users/login
 Content-Type: application/json
 
 {
@@ -33,7 +33,7 @@ Content-Type: application/json
 }
 
 ### Update User by ID
-PUT http://localhost:8001/api/users/6530c4edda98b7d842ff035a
+PUT http://localhost:3000/api/users/6530c4edda98b7d842ff035a
 Content-Type: application/json
 
 {
@@ -43,7 +43,7 @@ Content-Type: application/json
 }
 
 ### Create Another User
-POST http://localhost:8001/api/users/register
+POST http://localhost:3000/api/users/register
 Content-Type: application/json
 
 {
@@ -54,13 +54,13 @@ Content-Type: application/json
 }
 
 ### Get All Users
-GET http://localhost:8001/api/users
+GET http://localhost:3000/api/users
 
 ### Delete User by ID
-DELETE http://localhost:8001/api/users/653800b7e367865f76ab1078
+DELETE http://localhost:3000/api/users/653800b7e367865f76ab1078
 
 ### Create Job Test
-POST http://localhost:8001/api/jobs
+POST http://localhost:3000/api/jobs
 Content-Type: application/json
 
 {
@@ -70,7 +70,7 @@ Content-Type: application/json
 }
 
 ### Update Job by ID
-PUT http://localhost:8001/api/jobs/6531af097c0df22514c4982d
+PUT http://localhost:3000/api/jobs/6531af097c0df22514c4982d
 Content-Type: application/json
 
 {
@@ -80,10 +80,10 @@ Content-Type: application/json
 }
 
 ### Get Job by ID
-GET http://localhost:8001/api/jobs/6531af097c0df22514c4982d
+GET http://localhost:3000/api/jobs/6531af097c0df22514c4982d
 
 ### Create Another Job Test
-POST http://localhost:8001/api/jobs
+POST http://localhost:3000/api/jobs
 Content-Type: application/json
 
 {
@@ -93,13 +93,13 @@ Content-Type: application/json
 }
 
 ### Get All Jobs Test
-GET http://localhost:8001/api/jobs
+GET http://localhost:3000/api/jobs
 
 ### Delete Job by ID
-DELETE http://localhost:8001/api/jobs/653807167b517cff19e0ec1c 
+DELETE http://localhost:3000/api/jobs/653807167b517cff19e0ec1c 
 
 ### Creating a JavaScript Skill
-POST http://localhost:8001/api/skills
+POST http://localhost:3000/api/skills
 Content-Type: application/json
 
 {
@@ -107,7 +107,7 @@ Content-Type: application/json
 }
 
 ### Creating a Docker Skill
-POST http://localhost:8001/api/skills
+POST http://localhost:3000/api/skills
 Content-Type: application/json
 
 {
@@ -115,10 +115,10 @@ Content-Type: application/json
 }
 
 ### Get All Skills Test
-GET http://localhost:8001/api/skills
+GET http://localhost:3000/api/skills
 
 ### Create User Skill Test
-POST http://localhost:8001/api/userSkills
+POST http://localhost:3000/api/userSkills
 Content-Type: application/json
 
 {
@@ -129,11 +129,11 @@ Content-Type: application/json
 }
 
 ### Get UserSkills by user ID
-GET http://localhost:8001/api/userSkills/byUser/6530c4edda98b7d842ff035a
+GET http://localhost:3000/api/userSkills/byUser/6530c4edda98b7d842ff035a
 Content-Type: application/json
 
 ### Update UserSkill by ID
-PUT http://localhost:8001/api/userSkills/6531b7a6ba2b522738f7ac18
+PUT http://localhost:3000/api/userSkills/6531b7a6ba2b522738f7ac18
 Content-Type: application/json
 
 {
@@ -142,11 +142,11 @@ Content-Type: application/json
 }
 
 ### Delete UserSkill by ID
-DELETE http://localhost:8001/api/userSkills/653d8b2ec8ba5fc892440983
+DELETE http://localhost:3000/api/userSkills/653d8b2ec8ba5fc892440983
 Content-Type: application/json
 
 ### Create JobSkill 1
-POST http://localhost:8001/api/jobSkills
+POST http://localhost:3000/api/jobSkills
 Content-Type: application/json
 
 {
@@ -156,7 +156,7 @@ Content-Type: application/json
 }
 
 ### Create JobSkill 2
-POST http://localhost:8001/api/jobSkills
+POST http://localhost:3000/api/jobSkills
 Content-Type: application/json
 
 {
@@ -166,15 +166,15 @@ Content-Type: application/json
 }
 
 ### Get JobSkills by job ID
-GET http://localhost:8001/api/jobSkills/byJob/6531af097c0df22514c4982d
+GET http://localhost:3000/api/jobSkills/byJob/6531af097c0df22514c4982d
 Content-Type: application/json
 
 ### Get JobSkills by skill ID
-GET http://localhost:8001/api/jobSkills/bySkill/6531b519f8fff23b4e5fcd11
+GET http://localhost:3000/api/jobSkills/bySkill/6531b519f8fff23b4e5fcd11
 Content-Type: application/json
 
 ### Update JobSkill by ID
-PUT http://localhost:8001/api/jobSkills/6531bc6059ee545b6621507e
+PUT http://localhost:3000/api/jobSkills/6531bc6059ee545b6621507e
 Content-Type: application/json
 
 {
@@ -182,12 +182,12 @@ Content-Type: application/json
 }
 
 ### Delete JobSkill by ID
-DELETE http://localhost:8001/api/jobSkills/653d8b38c8ba5fc892440989
+DELETE http://localhost:3000/api/jobSkills/653d8b38c8ba5fc892440989
 Content-Type: application/json
 
 ### Create Contact
 
-POST http://localhost:8001/api/contacts
+POST http://localhost:3000/api/contacts
 Content-Type: application/json
 
 {   "userId": "6530c4edda98b7d842ff035a",
@@ -202,7 +202,7 @@ Content-Type: application/json
 
 ### Create Contact 2
 
-POST http://localhost:8001/api/contacts
+POST http://localhost:3000/api/contacts
 Content-Type: application/json
 
 {   "userId": "6530c4edda98b7d842ff035a",
@@ -216,15 +216,15 @@ Content-Type: application/json
 }
 
 ### Get Contact by ID
-GET http://localhost:8001/api/contacts/65371683efb387035ebe3687
+GET http://localhost:3000/api/contacts/65371683efb387035ebe3687
 Content-Type: application/json
 
 ### Get All Contacts for User
-GET http://localhost:8001/api/contacts/user/6530c4edda98b7d842ff035a
+GET http://localhost:3000/api/contacts/user/6530c4edda98b7d842ff035a
 Content-Type: application/json
 
 ### Create Contact 3
-POST http://localhost:8001/api/contacts
+POST http://localhost:3000/api/contacts
 Content-Type: application/json
 
 {   "userId": "6530c4edda98b7d842ff035a",
@@ -238,7 +238,7 @@ Content-Type: application/json
 }
 
 ### Update Contact by ID
-PUT http://localhost:8001/api/contacts/653d8b4ec8ba5fc892440995
+PUT http://localhost:3000/api/contacts/653d8b4ec8ba5fc892440995
 Content-Type: application/json
 
 {  
@@ -246,5 +246,5 @@ Content-Type: application/json
 }
 
 ### Delete Contact by ID
-DELETE http://localhost:8001/api/contacts/6537f8be63f29520b5a8a5e8
+DELETE http://localhost:3000/api/contacts/6537f8be63f29520b5a8a5e8
 Content-Type: application/json

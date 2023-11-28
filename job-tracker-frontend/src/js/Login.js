@@ -21,7 +21,7 @@ const Login = () => {
     };
 
     const loginUser = async () => {
-        const response = await fetch('/users/login', {
+        const response = await fetch('/api/users/login', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

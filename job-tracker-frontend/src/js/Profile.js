@@ -12,7 +12,7 @@ const Profile = () => {
     useEffect(() => {
         const fetchUserData = async () => {
             try {
-                const response = await fetch(`http://localhost:8001/api/users/${userId}`);
+                const response = await fetch(`/api/users/${userId}`);
                 
                 if (response.ok) {
                     const data = await response.json();
