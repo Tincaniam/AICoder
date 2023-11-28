@@ -96,7 +96,7 @@ const Contacts = () => {
 
     const handleDelete = async (id) => {
         try {
-            const response = await fetch(`http://localhost:3000/api/contacts/${id}`, {
+            const response = await fetch(`/api/contacts/${id}`, {
                 method: 'DELETE',
                 headers: {
                     'Content-Type': 'application/json',

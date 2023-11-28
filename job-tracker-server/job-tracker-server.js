@@ -12,8 +12,7 @@ const contactRoutes = require('./routes/contactRoutes');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Set up CORS before other middlewares and routes
-                      
+// Set up CORS before other middlewares and routes            
 app.use(cors());
 
 app.use(express.json());
