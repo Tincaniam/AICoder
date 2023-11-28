@@ -41,7 +41,7 @@ const Contacts = () => {
         const newContact = Object.fromEntries(formData.entries());
 
         try {
-            const response = await fetch('http://localhost:3000/api/contacts', {
+            const response = await fetch('/api/contacts', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -73,7 +73,7 @@ const Contacts = () => {
     const handleUpdateSubmit = async (event, id) => {
         event.preventDefault();
         try {
-            const response = await fetch(`http://localhost:3000/api/contacts/${id}`, {
+            const response = await fetch(`/api/contacts/${id}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',
