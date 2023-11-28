@@ -1,0 +1,57 @@
+Date : 2023-11-08 14:56:28
+Directory : /Users/matthewtinnel/Documents/Programming/AICoder/job-tracker-server
+Total : 24 files,  975 codes, 98 comments, 276 blanks, all 1349 lines
+
+Languages
++------------+------------+------------+------------+------------+------------+
+| language   | files      | code       | comment    | blank      | total      |
++------------+------------+------------+------------+------------+------------+
+| JavaScript |         20 |        601 |         65 |        166 |        832 |
+| Markdown   |          1 |        193 |          0 |         57 |        250 |
+| HTTP       |          1 |        153 |         33 |         52 |        238 |
+| JSON       |          1 |         27 |          0 |          1 |         28 |
+| Properties |          1 |          1 |          0 |          0 |          1 |
++------------+------------+------------+------------+------------+------------+
+
+Directories
++----------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                                     | files      | code       | comment    | blank      | total      |
++----------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                                        |         24 |        975 |         98 |        276 |      1,349 |
+| . (Files)                                                                                                |          5 |        430 |         36 |        123 |        589 |
+| controllers                                                                                              |          6 |        353 |         44 |         88 |        485 |
+| models                                                                                                   |          6 |        116 |          0 |         20 |        136 |
+| routes                                                                                                   |          6 |         53 |         14 |         37 |        104 |
+| tests                                                                                                    |          1 |         23 |          4 |          8 |         35 |
++----------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++----------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| filename                                                                                                 | language   | code       | comment    | blank      | total      |
++----------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| /Users/matthewtinnel/Documents/Programming/AICoder/job-tracker-server/.env                               | Properties |          1 |          0 |          0 |          1 |
+| /Users/matthewtinnel/Documents/Programming/AICoder/job-tracker-server/README.md                          | Markdown   |        193 |          0 |         57 |        250 |
+| /Users/matthewtinnel/Documents/Programming/AICoder/job-tracker-server/controllers/contactController.js   | JavaScript |         68 |         11 |         17 |         96 |
+| /Users/matthewtinnel/Documents/Programming/AICoder/job-tracker-server/controllers/jobController.js       | JavaScript |         51 |          9 |         12 |         72 |
+| /Users/matthewtinnel/Documents/Programming/AICoder/job-tracker-server/controllers/jobSkillController.js  | JavaScript |         60 |          2 |         14 |         76 |
+| /Users/matthewtinnel/Documents/Programming/AICoder/job-tracker-server/controllers/skillController.js     | JavaScript |         40 |          3 |          9 |         52 |
+| /Users/matthewtinnel/Documents/Programming/AICoder/job-tracker-server/controllers/userController.js      | JavaScript |         86 |         18 |         24 |        128 |
+| /Users/matthewtinnel/Documents/Programming/AICoder/job-tracker-server/controllers/userSkillController.js | JavaScript |         48 |          1 |         12 |         61 |
+| /Users/matthewtinnel/Documents/Programming/AICoder/job-tracker-server/job-tracker-server.js              | JavaScript |         56 |          3 |         13 |         72 |
+| /Users/matthewtinnel/Documents/Programming/AICoder/job-tracker-server/models/contactModel.js             | JavaScript |         26 |          0 |          4 |         30 |
+| /Users/matthewtinnel/Documents/Programming/AICoder/job-tracker-server/models/jobModel.js                 | JavaScript |         19 |          0 |          3 |         22 |
+| /Users/matthewtinnel/Documents/Programming/AICoder/job-tracker-server/models/jobSkillModel.js            | JavaScript |         19 |          0 |          3 |         22 |
+| /Users/matthewtinnel/Documents/Programming/AICoder/job-tracker-server/models/skillModel.js               | JavaScript |         10 |          0 |          3 |         13 |
+| /Users/matthewtinnel/Documents/Programming/AICoder/job-tracker-server/models/userModel.js                | JavaScript |         23 |          0 |          4 |         27 |
+| /Users/matthewtinnel/Documents/Programming/AICoder/job-tracker-server/models/userSkillModel.js           | JavaScript |         19 |          0 |          3 |         22 |
+| /Users/matthewtinnel/Documents/Programming/AICoder/job-tracker-server/package.json                       | JSON       |         27 |          0 |          1 |         28 |
+| /Users/matthewtinnel/Documents/Programming/AICoder/job-tracker-server/routes/contactRoutes.js            | JavaScript |          9 |          4 |          7 |         20 |
+| /Users/matthewtinnel/Documents/Programming/AICoder/job-tracker-server/routes/jobRoutes.js                | JavaScript |          9 |          3 |          7 |         19 |
+| /Users/matthewtinnel/Documents/Programming/AICoder/job-tracker-server/routes/jobSkillRoutes.js           | JavaScript |          9 |          1 |          4 |         14 |
+| /Users/matthewtinnel/Documents/Programming/AICoder/job-tracker-server/routes/skillRoutes.js              | JavaScript |          8 |          1 |          5 |         14 |
+| /Users/matthewtinnel/Documents/Programming/AICoder/job-tracker-server/routes/userRoutes.js               | JavaScript |         10 |          4 |          7 |         21 |
+| /Users/matthewtinnel/Documents/Programming/AICoder/job-tracker-server/routes/userSkillRoutes.js          | JavaScript |          8 |          1 |          7 |         16 |
+| /Users/matthewtinnel/Documents/Programming/AICoder/job-tracker-server/testRequests.http                  | HTTP       |        153 |         33 |         52 |        238 |
+| /Users/matthewtinnel/Documents/Programming/AICoder/job-tracker-server/tests/server.test.js               | JavaScript |         23 |          4 |          8 |         35 |
+| Total                                                                                                    |            |        975 |         98 |        276 |      1,349 |
++----------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
