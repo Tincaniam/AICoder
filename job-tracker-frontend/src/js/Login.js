@@ -21,7 +21,7 @@ const Login = () => {
     };
 
     const loginUser = async () => {
-        const response = await fetch('http://localhost:8001/api/users/login', {
+        const response = await fetch('/users/login', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
